@@ -41,7 +41,7 @@
                 transform: scale(1.1)
             }
 
-            @media only screen and (max-width: 991px) { 
+            /* @media only screen and (max-width: 991px) and (min-height: 767px) { 
                 .half {
                     height: 50%;
                 }
@@ -53,19 +53,26 @@
                 img:hover{
                     transform: scale(1.8)
                 }
-            }
+            } */
+
+            /* @media only screen and (max-width: 767px) {
+                .col-12 {
+                    min-width: 50%!important;
+                    width: 50%!important;
+                } 
+            } */
         </style>
     </head>
     <body class="h-100">
         <div class="container-fluid d-flex h-100 flex-column">
             <div class="row h-100"> 
-                <div class="half col-12 col-lg-6 box d-flex justify-content-center align-items-center overflow-hidden p-0 m-0"> 
+                <div class="half col-6 col-lg-6 box d-flex justify-content-center align-items-center overflow-hidden p-0 m-0"> 
                     <img src="assets/DSC04792-편집.jpg" class="h-100">
                     <p class="content text-center"> 
                          Live<br /> Stream
                     </p>
                 </div> 
-                <div class="half col-12 col-lg-6 box d-flex justify-content-center align-items-center overflow-hidden m-0"> 
+                <div class="half col-6 col-sm-6 box d-flex justify-content-center align-items-center overflow-hidden m-0"> 
                     <img src="assets/DSC03969-편집.jpg" class="h-100">
                     <p class="content text-center"> 
                         Online<br /> Invitation
