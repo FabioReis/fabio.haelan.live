@@ -8,71 +8,28 @@
         <meta name="description" content="Marriage Ceremony">
         <meta name="author" content="Fabio">
 
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-
-        <style>
-            .text-center {
-                position: absolute;
-                left: 50%;
-                top: 50%;
-                transform: translate(-50%, -50%);
-                pointer-events: none;
-            }
-
-            .half {
-                height: 100%;
-                font-size: 18px;
-                transition: 0.4s;
-                color: white;
-                font-weight: bold;
-            }
-
-            .half:hover {
-                cursor: pointer;
-                font-size: 28px!important;
-            }
-
-            img {
-                transition: 0.4s;
-            }
-
-            img:hover{
-                opacity:0.7 !important;
-                transform: scale(1.1)
-            }
-
-            @media only screen  and (min-height: 567px) and (max-width: 991px) { 
-                .half {
-                    height: 50%;
-                    width: 100%;
-                    min-width: 100%;;
-                }
-
-                img {
-                    transform: scale(1.7)
-                }
-
-                img:hover{
-                    transform: scale(1.8)
-                }
-            }
-        </style>
+        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.css">
+        <link rel="stylesheet" href="assets/css/main.css">
     </head>
     <body class="h-100">
         <div class="container-fluid d-flex h-100 flex-column">
             <div class="row h-100"> 
-                <div class="half col-6 col-lg-6 box d-flex justify-content-center align-items-center overflow-hidden p-0 m-0"> 
-                    <img src="assets/DSC04792-편집.jpg" class="h-100">
+                <a href="http://www.google.com" target="_blank" rel="noopener noreferrer" class="half d-block col-6 col-sm-6 box d-flex justify-content-center align-items-center overflow-hidden p-0 m-0"> 
+                    <img src="assets/images/DSC04642-편집.jpg" class="h-100">
                     <p class="content text-center"> 
-                         Live<br /> Stream
+                        <i class="fas fa-envelope d-inline-block"></i>
+                        <span class="d-block">Online Invitation</span>
                     </p>
-                </div> 
-                <div class="half col-6 col-sm-6 box d-flex justify-content-center align-items-center overflow-hidden m-0"> 
-                    <img src="assets/DSC03969-편집.jpg" class="h-100">
+                </a> 
+                <a href="#" class="half d-block col-6 col-lg-6 box d-flex justify-content-center align-items-center overflow-hidden p-0 m-0"> 
+                    <img src="assets/images/DSC03969-편집.jpg" class="h-100">
                     <p class="content text-center"> 
-                        Online<br /> Invitation
+                        <i class="fas fa-video d-inline-block"></i>
+                        <span class="d-block">Live Stream</span>
+                        <span class="d-block" style="font-size: 10px;">(coming soon)</span>
                     </p>
-                </div> 
+                </a>
             </div>
     </body>
 </html>

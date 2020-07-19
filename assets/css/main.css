@@ -1,0 +1,49 @@
+.text-center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.half {
+    height: 100%;
+    font-size: 18px;
+    transition: 0.4s;
+    color: white!important;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.half:hover {
+    cursor: pointer;
+    font-size: 28px!important;
+}
+
+img {
+    transition: 0.4s;
+}
+
+img:hover{
+    opacity:0.7 !important;
+    transform: scale(1.1)
+}
+
+@media only screen  and (min-height: 567px) and (max-width: 991px) { 
+    .half {
+        height: 50%;
+        width: 100%;
+        min-width: 100%;;
+    }
+
+    img {
+        transform: scale(1.7)
+    }
+
+    img:hover{
+        transform: scale(1.8)
+    }
+}
