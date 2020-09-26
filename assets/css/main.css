@@ -3,6 +3,9 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
     pointer-events: none;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -12,7 +15,10 @@
 .half {
     height: 100%;
     font-size: 18px;
-    transition: 0.4s;
+    transition: font-size 0.4s ease;
+    -webkit-transition: font-size 0.4s ease;
+    -moz-transition: font-size 0.4s ease;
+    -o-transition: font-size 0.4s ease;
     color: white!important;
     font-weight: bold;
     text-decoration: none;
@@ -24,12 +30,18 @@
 }
 
 img {
-    transition: 0.4s;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    -webkit-transition: opacity 0.4s ease, transform 0.4s ease;
+    -moz-transition: opacity 0.4s ease, transform 0.4s ease;
+    -o-transition: opacity 0.4s ease, transform 0.4s ease;
 }
 
 img:hover{
     opacity:0.7 !important;
-    transform: scale(1.1)
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
 }
 
 @media only screen  and (min-height: 567px) and (max-width: 991px) { 
@@ -40,10 +52,16 @@ img:hover{
     }
 
     img {
-        transform: scale(1.7)
+        transform: scale(1.7);
+        -webkit-transform: scale(1.7);
+        -moz-transform: scale(1.7);
+        -o-transform: scale(1.7);
     }
 
     img:hover{
-        transform: scale(1.8)
+        transform: scale(1.8);
+        -webkit-transform: scale(1.8);
+        -moz-transform: scale(1.8);
+        -o-transform: scale(1.8);
     }
 }
