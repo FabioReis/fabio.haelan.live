@@ -107,6 +107,10 @@
             padding: 0 1.5rem;
         }
 
+        .carousel-hidden {
+            height: 0;
+        }
+
          /* Landscape mode */    
         @media only screen and (orientation: landscape) {
             html{font-size:4.445vmax;}
@@ -120,17 +124,17 @@
 
 
     <script type="text/javascript" src="node_modules/jquery/dist/jquery.js" ></script>
+    <script type="text/javascript" src="bower_components/jquery-ui/jquery-ui.min.js" ></script>
     <script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.js" ></script>
     <script type="text/javascript">
         $(function () {
             $('#close-gallery').click(function() {
-                $('#carouselGalleryControls').addClass("d-none")
+                $('#carouselGalleryControls').addClass("carousel-hidden",500)
             })
 
             $('.gallery-item').click(function() {
-                $('#carouselGalleryControls').removeClass("d-none")
+                $('#carouselGalleryControls').removeClass("carousel-hidden",500)
             })
-            
         })
     </script>
 </head>
@@ -185,7 +189,7 @@
     
     
     
-    <div id="carouselGalleryControls" class="carousel slide position-fixed d-none" style="top:0;bottom:0;right:0;left:0;background-color: black;" data-interval="false">
+    <div id="carouselGalleryControls" class="carousel slide position-fixed carousel-hidden" style="overflow:auto;top:0;bottom:0;right:0;left:0;background-color: black;" data-interval="false">
         <div class="carousel-inner w-100 h-100">
             <div class="carousel-item active w-100 h-100">
                 <img class="w-100 h-100" style="object-fit: contain; object-position: center;" src="assets/images//gallery/gallery1.jpg">
@@ -232,9 +236,9 @@
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
         </a>
-        <button id="close-gallery" type="button" class="close fixed-top" style="left:50%;right:50%;" aria-label="Close">
+        <a id="close-gallery" type="button" class="close" style="position: absolute; top:0; left: calc(50% - 24px);right: calc(50% - 24px);background-color: #fff;padding: 8px 12px; border-radius: 0 0 12px 12px;text-align: center;" aria-label="Close">
             <span aria-hidden="true">&times;</span>
-        </button>
+        </a>
   </div>
 </body>
 
