@@ -14,6 +14,13 @@
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.css">
     <style>
+        html {
+            -webkit-text-size-adjust: none;
+            -moz-text-size-adjust: none;
+            -ms-text-size-adjust: none;
+            font-size:4.445vmin;
+        }
+
         .img-container {
             width: 100%;
             height: 100%;
@@ -21,6 +28,29 @@
             background-size: cover;
             background-repeat: no-repeat;
             background-position: 50% 70%;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            -webkit-box-orient: vertical;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            position: relative;
+            text-align: center;
+        }
+
+        .img-container:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            display: block;
+            background: url("assets/images/icons/visual_02.png");
+            background-repeat: no-repeat;
+            background-size: 100% auto;
         }
 
         .gallery-item {
@@ -29,6 +59,62 @@
             height: 100px;
             width: 100px;
             display: inline-block;
+        }
+
+        .vertical-item.info {
+            z-index: 10;
+            position: absolute;
+            left: 0;
+            top: 0;
+            padding: 3.125rem 0 0;
+            width: 100%;
+            flex-shrink: 0;
+        }
+
+        .p1 {
+            margin-bottom: 1.563rem;
+            font-family: "KoPub Batang";
+            font-size: 1.313rem;
+            font-weight: 400;
+            line-height: 1;
+            color: #fff;
+            letter-spacing: 0.15em;
+        }
+
+        .p1 .bar {
+            font-size: 0.750rem;
+            font-weight: 300;
+        }
+
+        .p2 {
+            font-size: 0.750rem;
+            font-weight: 300;
+            line-height: 1.250rem;
+            color: #fff;
+        }
+
+        .p2 .vs-span {
+            display: block;
+        }
+
+        .sec-txt {
+            font-size: 0.813rem;
+            font-weight: 300;
+            line-height: 1.5rem;
+            color: #111;
+            text-align: center;
+            white-space: pre-wrap;
+            padding: 0 1.5rem;
+        }
+
+         /* Landscape mode */    
+        @media only screen and (orientation: landscape) {
+            html{font-size:4.445vmax;}
+        }
+
+        /* DeskTop */
+        @media all and (min-width:720px) {
+            html{font-size:24px !important;}
         }
     </style>
 
@@ -54,23 +140,42 @@
         <div class="row justify-content-center h-100 w-100 m-0" >
             <did class="col-md-9 col-sm-12 h-100 p-0">
                 <div class="img-container">
-                    
+                    <div class="vertical-item info">
+						<p class="p1">
+							<span class="vs-span">Fábio</span>
+							<span class="vs-span bar">&</span>
+							<span class="vs-span">Haelan</span>
+						</p>
+						<p class="p2">
+							<span class="vs-span">9 de Outubro de 2020<br />Sexta-feira</span>
+							<span class="vs-span">11 da noite</span>
+						</p>
+					</div>
                 </div>
                 <div class="w-100">
-                    <h1 class="p-3">Fotos</h1>
+                    <div class="w-100">
+                        <img style="display: block; margin:50px auto; width: 50px; " src="assets/images/icons/sub_title_intro.png" >
+                    </div>
+                    
+                    <div class="sec-txt">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
+                </div>
+                <div class="w-100">
+                    <div class="w-100">
+                        <img style="display: block; margin:50px auto; width: 70px; " src="assets/images/icons/sub_title_gallery.png" >
+                    </div>
                     
                     <div class="w-100 mb-3" style="overflow:scroll; white-space: nowrap;">
-                        <img class="gallery-item ml-3 mr-3" src="assets/images//gallery/gallery1.jpg" data-target="#carouselGalleryControls" data-slide-to="0" />
-                        <img class="gallery-item mr-3" src="assets/images//gallery/gallery2.jpg" data-target="#carouselGalleryControls" data-slide-to="1" />
-                        <img class="gallery-item mr-3" src="assets/images//gallery/gallery3.jpg" data-target="#carouselGalleryControls" data-slide-to="2"/>
-                        <img class="gallery-item mr-3" src="assets/images//gallery/gallery4.jpg" data-target="#carouselGalleryControls" data-slide-to="3"/>
-                        <img class="gallery-item mr-3" src="assets/images//gallery/gallery5.jpg" data-target="#carouselGalleryControls" data-slide-to="4"/>
-                        <img class="gallery-item mr-3" src="assets/images//gallery/gallery6.jpg" data-target="#carouselGalleryControls" data-slide-to="5"/>
-                        <img class="gallery-item mr-3" src="assets/images//gallery/gallery7.jpg" data-target="#carouselGalleryControls" data-slide-to="6"/>
-                        <img class="gallery-item mr-3" src="assets/images//gallery/gallery8.jpg" data-target="#carouselGalleryControls" data-slide-to="7"/>
-                        <img class="gallery-item mr-3" src="assets/images//gallery/gallery9.jpg" data-target="#carouselGalleryControls" data-slide-to="8"/>
-                        <img class="gallery-item mr-3" src="assets/images//gallery/gallery10.jpg" data-target="#carouselGalleryControls" data-slide-to="9"/>
-                        <img class="gallery-item mr-3" src="assets/images//gallery/gallery11.jpg" data-target="#carouselGalleryControls" data-slide-to="10"/>
+                        <img class="gallery-item ml-3 mr-2" src="assets/images//gallery/gallery1.jpg" data-target="#carouselGalleryControls" data-slide-to="0" />
+                        <img class="gallery-item mr-2" src="assets/images//gallery/gallery2.jpg" data-target="#carouselGalleryControls" data-slide-to="1" />
+                        <img class="gallery-item mr-2" src="assets/images//gallery/gallery3.jpg" data-target="#carouselGalleryControls" data-slide-to="2"/>
+                        <img class="gallery-item mr-2" src="assets/images//gallery/gallery4.jpg" data-target="#carouselGalleryControls" data-slide-to="3"/>
+                        <img class="gallery-item mr-2" src="assets/images//gallery/gallery5.jpg" data-target="#carouselGalleryControls" data-slide-to="4"/>
+                        <img class="gallery-item mr-2" src="assets/images//gallery/gallery6.jpg" data-target="#carouselGalleryControls" data-slide-to="5"/>
+                        <img class="gallery-item mr-2" src="assets/images//gallery/gallery7.jpg" data-target="#carouselGalleryControls" data-slide-to="6"/>
+                        <img class="gallery-item mr-2" src="assets/images//gallery/gallery8.jpg" data-target="#carouselGalleryControls" data-slide-to="7"/>
+                        <img class="gallery-item mr-2" src="assets/images//gallery/gallery9.jpg" data-target="#carouselGalleryControls" data-slide-to="8"/>
+                        <img class="gallery-item mr-2" src="assets/images//gallery/gallery10.jpg" data-target="#carouselGalleryControls" data-slide-to="9"/>
+                        <img class="gallery-item mr-2" src="assets/images//gallery/gallery11.jpg" data-target="#carouselGalleryControls" data-slide-to="10"/>
                         <img class="gallery-item mr-3" src="assets/images//gallery/gallery12.jpg" data-target="#carouselGalleryControls" data-slide-to="11"/>
                     </div>
                 </div>
