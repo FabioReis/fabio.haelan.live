@@ -20,7 +20,13 @@
     <script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.js" ></script>
     <script type="text/javascript">
         $(function () {
-            $('#myModal').modal('toggle')
+            if(location.search.includes("lang=pt-br")){
+
+            } else if (location.search.includes("lang=en-us")) {
+
+            } else {
+                $('#myModal').modal('toggle')
+            }
         })
     </script>
 </head>
