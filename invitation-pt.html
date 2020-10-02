@@ -59,6 +59,7 @@
             height: 100px;
             width: 100px;
             display: inline-block;
+            cursor: pointer;
         }
 
         .vertical-item.info {
@@ -98,17 +99,20 @@
         }
 
         .sec-txt {
-            font-size: 0.813rem;
-            font-weight: 300;
-            line-height: 1.5rem;
-            color: #111;
-            text-align: center;
             white-space: pre-wrap;
             padding: 0 1.5rem;
         }
 
         .carousel-hidden {
             height: 0;
+        }
+
+        .intro-container {
+            font-size: 0.813rem;
+            font-weight: 300;
+            color: #111;
+            text-align: center;
+            line-height: 1.5rem;
         }
 
          /* Landscape mode */    
@@ -129,11 +133,16 @@
     <script type="text/javascript">
         $(function () {
             $('#close-gallery').click(function() {
-                $('#carouselGalleryControls').addClass("carousel-hidden",500)
+                $('#carouselGalleryControls').addClass("carousel-hidden",500, function(){
+                    $(".loading").fadeIn( "slow" );
+                })
             })
 
             $('.gallery-item').click(function() {
                 $('#carouselGalleryControls').removeClass("carousel-hidden",500)
+                setTimeout(() => {
+                    $(".loading").fadeOut( "slow" );
+                }, 1000);
             })
 
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -162,23 +171,90 @@
 						</p>
 						<p class="p2">
 							<span class="vs-span">9 de Outubro de 2020<br />Sexta-feira</span>
-							<span class="vs-span">11 da noite</span>
+							<span class="vs-span">10 e 30 da noite (Brasília)</span>
 						</p>
                     </div>
-                    <a href="#intro-anchor" style="z-index:10; position: absolute;bottom: 12px; color: white; left: 0; right: 0; margin: auto; font-size: 26px;" >
+                    <a href="#intro-anchor" style="z-index:1; position: absolute;bottom: 12px; color: white; left: 0; right: 0; margin: auto; font-size: 26px;" >
                         <i class="fas fa-arrow-down"></i>
                     </a>
                 </div>
                 <div class="w-100">
-                    <a id="intro-anchor" class="w-100">
-                        <img style="display: block; margin:50px auto; width: 50px; " src="assets/images/icons/sub_title_intro.png" >
+                    <a id="intro-anchor" class="w-100" style="padding: 50px 0;display: block;">
+                        <img style="display: block; margin:auto; height: 70px; " src="assets/images/icons/sub_title_introducao.png" >
                     </a>
                     
-                    <div class="sec-txt">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
+                    <div class="w-100 intro-container">
+                        <!-- <div class="sec-txt">Two oceans apart and a whole world in between us. We came across each other and dreamed of being together. The moment has finally come. We are now going to laugh, and face hardships together in the journey we call life. It would be our great pleasure to have you on this special day as we take the first steps in our life together.</div> -->
+                        <div class="sec-txt">Com um mundo todo de diferenças entre nós, nos encontramos por acaso e criamos o sonho de um dia estarmos juntos. Esse sonho finalmente se tornou realidade. Chegou o momento de vivermos nossa vida em conjunto, nas alegrias e nas adiversidades, trabalhando juntos nessa jornada que chamamos de vida. Seria um grande prazer que você fizesse parte desse dia tão especial, nos acompanhando nessa primeira etapa da nossa vida a dois.</div>
+                    </div>
+                    
                 </div>
+
+                <div class="w-100">
+                    <a id="intro-anchor" class="w-100">
+                        <img style="display: block; margin:50px auto; height: 70px; " src="assets/images/icons/sub_title_programa.png" >
+                    </a>
+                    
+                    <div class="w-100 intro-container">
+                        <table class="w-100" style="margin-top: 42px;">
+                            <tbodY>
+    
+                                <tr>
+                                    <td>Recepção</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Abertura</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Acender de velas</td>
+                                </tr>
+                                    
+                                <tr>
+                                    <td>Entrada do noivo</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>Entrada da noiva</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>Menção dos votos</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>Declaração de casados</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Mensagens da família</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Oração</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Performances</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Agradecimentos</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Encerramento</td>
+                                </tr>
+                            </tbodY>
+                        </table>
+                    </div>
+                    
+                </div>
+
                 <div class="w-100">
                     <div class="w-100">
-                        <img style="display: block; margin:50px auto; width: 70px; " src="assets/images/icons/sub_title_gallery.png" >
+                        <img style="display: block; margin:50px auto; height: 70px; " src="assets/images/icons/sub_title_galeria.png" >
                     </div>
                     
                     <div class="w-100 mb-3" style="overflow:scroll; white-space: nowrap;">
@@ -202,7 +278,7 @@
     
     
     
-    <div id="carouselGalleryControls" class="carousel slide position-fixed carousel-hidden" style="overflow:auto;top:0;bottom:0;right:0;left:0;background-color: black;" data-interval="false">
+    <div id="carouselGalleryControls" class="carousel slide position-fixed carousel-hidden" style="z-index:10;overflow:auto;top:0;bottom:0;right:0;left:0;background-color: black;" data-interval="false">
         <div class="carousel-inner w-100 h-100">
             <div class="carousel-item active w-100 h-100">
                 <img class="w-100 h-100" style="object-fit: contain; object-position: center;" src="assets/images//gallery/gallery1.jpg">
@@ -241,6 +317,11 @@
                 <img class="w-100 h-100" style="object-fit: contain; object-position: center;" src="assets/images//gallery/gallery12.jpg">
             </div>
         </div>
+        <dib class="loading" style="width: 100%; background-color: black; position: absolute; top:0; bottom: 0;">
+            <div class="spinner-border text-light" role="status" style="position: absolute; top: calc(50% - 12px); left: calc(50% - 20px);">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </dib>
         <a class="carousel-control-prev" href="#carouselGalleryControls" role="button" data-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="sr-only">Previous</span>
