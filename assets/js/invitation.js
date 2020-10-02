@@ -1,4 +1,12 @@
 $(function () {
+    $(document).keyup(function (e) {
+        if (e.which == 39) {
+            $('.carousel-control-next').trigger('click');
+        } else if (e.which == 37) {
+            $('.carousel-control-prev').trigger('click');
+        }
+    });
+
     $('#close-gallery').click(function () {
         $('#carouselGalleryControls').addClass("carousel-hidden", 500, function () {
             $(".loading").fadeIn("slow");
