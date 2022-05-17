@@ -10,3 +10,5 @@ https://fabioreis.github.io/fabio.haelan.live?lang=en
 
 Portuguese
 https://fabioreis.github.io/fabio.haelan.live?lang=pt
+
+Ps: I'm not hosting the original domain anymore, so i just changed the hosting to githubpages
